@@ -1,0 +1,360 @@
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: 'Nunito',sans-serif;
+    font-weight: 400;
+}
+    
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    overflow-x: hidden;
+}
+.navig{
+    width: 100%;
+    height: 8rem;
+    position: fixed;
+    top: -8rem;
+    background-color: rgb(226, 224, 68);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-item{
+    margin: 0 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.material-icons-round.icon-size{
+    font-size:5rem;
+    color: black;
+
+}
+
+.nav-item span{
+    font-size: 2rem;
+    color: black;
+    text-transform: uppercase;
+}
+
+.menu{
+    background-color: rgb(167, 39, 39);
+    width: 2rem;
+    height: 4rem;
+    position: fixed;
+    top: 1rem;
+    left: 5rem;
+    border-radius: 30rem 30rem 20rem 20rem;
+ 
+}
+
+.menu::before{
+    content: "";
+    background-color: rgb(240, 44, 44);
+    width: 0.2rem;
+    height: 15rem;
+    position:absolute;
+    top: -15rem;
+    left:calc(50% - 0.1rem);
+}
+
+.changenav{
+    top:0;
+}
+
+.menu.changenav{
+    top: 9rem;
+}
+
+
+.section-1{
+    width: 100%;
+    height:100vh;
+    background-color: rgba(71, 8, 96, 0.826);
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.section-heading{
+    font-size: 8rem;font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    text-shadow: 0.3rem 0.3rem 0.2rem  red;
+}
+
+.section-1-icons i{
+    font-size: 30rem;
+    color: rgba(255, 212, 19, 0.933);
+    position: absolute;
+    text-shadow: 0.2rem 0.2rem 0.3rem #000;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.section-1-icons i.change{
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.3s 0.3s;
+
+}
+
+.section-2{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.521);
+    padding: 10rem 0rem;
+}
+
+.cards-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card::after{
+    content: '';
+    height: 1rem;
+    width: 100%;
+    background-color: rgba(104, 102, 38, 0.832);
+    position:absolute;
+    top: -1rem;
+    left:0rem;
+    transform: skewX(45deg);
+    transform-origin: bottom;
+    box-shadow: -0.1rem -0.1rem -0.1rem black;
+
+}
+.card::before{
+    content: '';
+    height: 100%;
+    width: 1rem;
+    background-color: rgba(104, 102, 38, 0.832);
+    position:absolute;
+    top: 0;
+    left: -1rem;
+    transform: skewY(45deg);
+    transform-origin: right;
+    box-shadow: -0.1rem -0.1rem -0.1rem black;
+
+}
+
+.card{
+    width: 30rem;
+    background: linear-gradient(yellow, rgb(234, 234, 161));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem;
+    position: relative;
+    box-shadow: 1rem 1rem 1rem rgb(39, 38, 38);
+    transform: rotateY(20deg) skewX(-2deg);
+
+}
+
+.card:hover{
+    transform:  rotateY(20deg) translateY(-2rem) skewX(-2deg);
+    box-shadow: 2rem 2rem 2rem rgb(38, 36, 36);
+   
+}
+
+.card-img{
+    width: 100%;
+}
+
+.card-name{
+    font-size: 3rem;
+    font-weight: 900;
+    padding: 1rem 0;
+    text-shadow: 0.15rem 0.15rem 0.15rem black;
+
+}
+
+.card-btn{
+    width: 70%;
+    background-color: #000;
+    color: white;
+    padding: 0.5rem 0;
+    font-size: 1.5rem;
+    border-radius: 2rem;
+    border: none;
+    box-shadow: 0.2rem 0.2rem 0.4rem black;
+    text-transform: uppercase;
+}
+
+.section-3{
+    background-color: rgb(88, 79, 79);
+    padding: 5rem 0;
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.gallery-link{
+    position: relative;
+    margin: 4rem 1rem;
+}
+
+
+.gallery-link::before{
+    content: '';
+    width: 0.2rem;
+    height: 0;
+    background-color:white;
+    position: absolute;
+    top: 2vw;
+    left: 80%;
+    transition: height 0.5s;
+    z-index: 100;
+
+}
+.gallery-link:hover::before{
+    height: 80%;
+    
+}
+
+.gallery-link::after{
+    content: '';
+    width: 0;
+    height: 0.2rem;
+    background-color: white;
+    position: absolute;
+    top: 30%;
+    left:2rem;
+    transition: width 0.5s;
+}
+
+.gallery-link:hover::after{
+    width: 90%;
+    
+}
+
+.gallery-img{
+    width: 24vw;
+    height: 15vw;
+    object-fit: cover;
+    box-shadow: 0.3rem 0.3rem 0.5rem red,0.5rem 0.5rem 0.5rem blue,0.7rem 0.7rem 0.5rem yellow;
+    transition: all 0.3s;
+    border-radius: 10%;
+}
+
+.gallery-link:hover .gallery-img{
+    box-shadow: 1rem 1rem 1rem red,2rem 2rem 1rem blue,3rem 3rem 1rem yellow;
+    filter: blur(0.5rem);
+    transform: scale(1.1);
+}
+
+
+.gallery-item-name{
+    text-transform: uppercase;
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    color: rgb(255, 255, 255);
+    font-size: 1.6rem;
+    font-weight: 600;
+    width: 0;
+    overflow: hidden;
+    text-shadow: 0.1rem 0.1rem 0.5rem black;
+    
+}
+
+.item-description{
+    position: absolute;
+    bottom: 3vw;
+    left: 3rem;
+    font-size: 1.4rem;
+    color: white;
+    width: 70%;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    text-shadow: 0.1rem 0.1rem 0.5rem black;
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+
+
+.gallery-link:hover .gallery-item-name{
+    transition: width 0.8s;
+    width: 100%;
+}
+
+.gallery-link:hover .item-description{
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s .2s;
+}
+
+.footer{
+    display: flex;
+    width: 100%;
+    height: 40vh;
+    padding-top: 4rem;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    position: relative;
+    background-color: rgb(91, 86, 86);
+    color: white;
+}
+
+.footer-text-heading{
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: rgb(195, 195, 71);
+    text-shadow: -0.2rem 0.2rem 0.1rem black;
+}
+
+.footer-text-para{
+    text-transform: uppercase;
+
+}
+
+.signup-form-input{
+    outline: none;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 20rem;
+
+}
+
+form{
+    display: flex;
+}
+
+.signup-btn{
+    position: relative;
+    right: 3rem;
+    width: 6rem;
+    color: white;
+    background: rgb(208, 222, 19);
+    border: none;
+    border-radius: 0 1rem 1rem 0;}
+
+.copyright{
+    position: absolute;
+    bottom: 3rem;
+    font-size: 2rem;
+}
